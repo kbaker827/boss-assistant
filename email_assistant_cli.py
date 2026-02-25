@@ -65,7 +65,7 @@ class EmailAssistantCLI:
         print("📧  EMAIL ASSISTANT - Terminal Version")
         print("="*60)
         print(f"Monitoring: {self.config['email']}")
-        print(f"Check interval: {self.config['check_interval_seconds']} seconds")
+        print(f"Check interval: {self.config['check_interval_seconds'] // 60} minutes")
         print(f"Spam detection: {'ON' if self.config['spam_detection'] else 'OFF'}")
         print("="*60)
         print()
@@ -84,7 +84,7 @@ class EmailAssistantCLI:
         print()
         print("Commands:")
         print("  [Enter] - Check emails now")
-        print("  'auto'  - Auto-check every 30 seconds")
+        print("  'auto'  - Auto-check every 5 minutes")
         print("  'quit'  - Exit")
         print()
         
@@ -121,7 +121,7 @@ class EmailAssistantCLI:
     
     def auto_mode(self):
         """Auto-check mode"""
-        print(f"\n🔄 Auto-mode: Checking every {self.config['check_interval_seconds']} seconds")
+        print(f"\n🔄 Auto-mode: Checking every {self.config['check_interval_seconds'] // 60} minutes")
         print("Press Ctrl+C to stop\n")
         
         try:
