@@ -1,6 +1,29 @@
-# Boss Assistant 🤖
+# Email Assistant for macOS 📧
 
-**AI assistant that monitors emails from your boss, automatically completes tasks, learns new skills, and presents work for your approval.**
+**AI assistant that manages your entire work inbox on macOS.**
+
+## What It Does
+
+1. 📧 **Monitors ALL Emails** - Watches kbaker@onwasa.com inbox
+2. 🚫 **Spam Detection** - Identifies spam and junk mail
+3. 🧠 **Smart Task Handling** - Handles legitimate work emails
+4. 📚 **Learns Skills** - Learns how to handle new types of requests
+5. ✅ **Approval Required** - Shows you everything before acting
+
+## Features
+
+### For Spam Emails
+- Detects spam automatically
+- Finds unsubscribe links
+- Offers to unsubscribe & block
+- Moves to junk folder
+- **Always asks before doing anything**
+
+### For Work Emails
+- Parses requests
+- Executes tasks using learned skills
+- Learns new skills when needed
+- **Always asks before sending/replying**
 
 ## Quick Start
 
@@ -10,65 +33,64 @@ python setup.py
 ```
 
 ### 2. Configure
-Edit `~/.boss_assistant_config.json`:
+Edit `~/.email_assistant_config.json`:
 ```json
 {
-  "boss_email": "dbergman@onwasa.com",
-  "email_provider": "outlook",
-  "check_interval_minutes": 5,
-  "require_approval": true
+  "email": "kbaker@onwasa.com",
+  "mail_app": "outlook",
+  "check_interval_seconds": 30,
+  "require_approval": true,
+  "spam_detection": true
 }
 ```
 
 ### 3. Run
 ```bash
-python boss_assistant.py
+python email_assistant.py
 ```
 
 ## How It Works
 
-1. **Monitors Email** - Checks for emails from your boss every 5 minutes
-2. **Understands Requests** - Uses AI to parse what needs to be done
-3. **Learns Skills** - Creates new skills for task types it hasn't seen before
-4. **Does the Work** - Executes tasks using OpenClaw/tools
-5. **Gets Approval** - Shows you the work before finalizing
+```
+📧 New Email Arrives
+        ↓
+   ┌─────────────────────┐
+   │ Is it spam?         │
+   └─────────────────────┘
+      Yes ↓       ↓ No
+   ┌─────────┐  ┌──────────────────┐
+   │Unsubscribe│ │Parse task        │
+   │Block      │ │Execute skill     │
+   │sender     │ │                  │
+   └─────────┘  └──────────────────┘
+        ↓              ↓
+   ┌───────────────────────────────┐
+   │  Show you for approval        │
+   │  [Approve] [Edit] [Block]     │
+   └───────────────────────────────┘
+```
 
-## Example
+## Safety
 
-**Boss emails you:**
-> "Can you pull the Q3 sales numbers and send them to the team?"
-
-**Assistant does:**
-1. Recognizes this as a "generate_report" task
-2. Either uses existing skill or learns how to do it
-3. Generates the report
-4. Drafts email to team
-5. **Shows you for approval before sending**
-
-## Features
-
-- ✅ Never sends anything without your approval
-- ✅ Learns from each task to get better
-- ✅ Shows exactly what it did and why
-- ✅ Works offline with learned skills
-- ✅ Secure - stores everything locally
+- 🔒 **Never acts without your approval**
+- 🔒 **Shows you exactly what it will do**
+- 🔒 **Whitelist protection** for important domains
+- 🔒 **Easy to block/unblock senders**
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `boss_assistant.py` | Main GUI application |
-| `email_connector.py` | Email system connection |
-| `task_executor.py` | Task execution engine |
-| `setup.py` | Initial setup |
+| `email_assistant.py` | Main GUI application |
+| `setup.py` | Configuration setup |
+| `SKILL.md` | Documentation |
 
-## Safety
+## Requirements
 
-- 🔒 Never auto-sends emails
-- 🔒 All approval is manual
-- 🔒 Local storage only
-- 🔒 Logs everything for review
+- macOS
+- Python 3.8+
+- Outlook for Mac or Apple Mail
 
 ## Disclaimer
 
-This is an automation tool. Always review before sending anything to your boss! 😊
+⚠️ This tool requires your approval for every action. Never runs automatically.
