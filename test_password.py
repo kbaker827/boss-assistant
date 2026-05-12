@@ -19,7 +19,7 @@ config_path = Path.home() / '.email_assistant_config.json'
 if config_path.exists():
     with open(config_path) as f:
         config = json.load(f)
-    print(f"Email: {config.get('email', 'kbaker@onwasa.com')}")
+    print(f"Email: {config.get('email', 'youremail@example.com')}")
     print(f"IMAP Server: {config.get('imap_server', 'outlook.office365.com')}")
     
     if config.get('imap_password'):
