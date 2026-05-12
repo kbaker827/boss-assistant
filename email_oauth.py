@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-OAuth Email Checker for kbaker@onwasa.com
+OAuth Email Checker for youremail@example.com
 Uses Microsoft Modern Authentication (browser sign-in)
 """
 
