@@ -36,7 +36,7 @@ class BossAssistant:
         """Load configuration"""
         config_path = Path.home() / '.boss_assistant_config.json'
         default_config = {
-            'boss_email': 'dbergman@onwasa.com',
+            'boss_email': 'boss@example.com',
             'check_interval_minutes': 5,
             'require_approval': True,
             'auto_reply': False
