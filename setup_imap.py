@@ -25,14 +25,14 @@ def setup():
         config = {}
     
     # Get email
-    email = input(f"Email address [default: {config.get('email', 'kbaker@onwasa.com')}]: ").strip()
+    email = input(f"Email address [default: {config.get('email', 'youremail@example.com')}]: ").strip()
     if email:
         config['email'] = email
     elif 'email' not in config:
-        config['email'] = 'kbaker@onwasa.com'
+        config['email'] = 'youremail@example.com'
     
     print()
-    print("For Office 365/Exchange (kbaker@onwasa.com):")
+    print("For Office 365/Exchange (youremail@example.com):")
     print("  IMAP Server: outlook.office365.com")
     print("  Port: 993")
     print()
