@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-IMAP Email Checker for kbaker@onwasa.com
+IMAP Email Checker for youremail@example.com
 """
 
 import imaplib
@@ -26,7 +26,7 @@ def connect_imap():
     # For Office 365/Exchange
     imap_server = config.get('imap_server', 'outlook.office365.com')
     imap_port = config.get('imap_port', 993)
-    email_addr = config.get('email', 'kbaker@onwasa.com')
+    email_addr = config.get('email', 'youremail@example.com')
     password = config.get('imap_password', '')
     
     if not password:
