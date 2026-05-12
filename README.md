@@ -4,7 +4,7 @@
 
 ## What It Does
 
-1. 📧 **Monitors ALL Emails** - Watches kbaker@onwasa.com inbox
+1. 📧 **Monitors ALL Emails** - Watches youremail@example.com inbox
 2. 🚫 **Spam Detection** - Identifies spam and junk mail
 3. 🧠 **Smart Task Handling** - Handles legitimate work emails
 4. 📚 **Learns Skills** - Learns how to handle new types of requests
@@ -36,7 +36,7 @@ python setup.py
 Edit `~/.email_assistant_config.json`:
 ```json
 {
-  "email": "kbaker@onwasa.com",
+  "email": "youremail@example.com",
   "mail_app": "outlook",
   "check_interval_seconds": 30,
   "require_approval": true,
