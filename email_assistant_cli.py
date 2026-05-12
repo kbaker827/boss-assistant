@@ -2,7 +2,7 @@
 """
 Email Assistant - Terminal Version (No GUI required)
 
-Monitors ALL emails at kbaker@onwasa.com, handles spam (unsubscribe/block),
+Monitors ALL emails at youremail@example.com, handles spam (unsubscribe/block),
 completes work tasks, learns skills, and gets approval before acting.
 """
 
@@ -32,13 +32,13 @@ class EmailAssistantCLI:
         """Load configuration"""
         config_path = Path.home() / '.email_assistant_config.json'
         default_config = {
-            'email': 'kbaker@onwasa.com',
+            'email': 'youremail@example.com',
             'check_interval_seconds': 30,
             'require_approval': True,
             'spam_detection': True,
             'auto_unsubscribe': False,
             'mail_app': 'outlook',
-            'whitelist_domains': ['onwasa.com', 'microsoft.com', 'apple.com'],
+            'whitelist_domains': ['example.com', 'microsoft.com', 'apple.com'],
             'blocked_senders': [],
             'unsubscribed': []
         }
