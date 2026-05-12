@@ -25,7 +25,7 @@ print("\n🔄 Testing connection...")
 try:
     # Try to connect
     mail = imaplib.IMAP4_SSL('outlook.office365.com', 993)
-    mail.login('kbaker@onwasa.com', password)
+    mail.login('youremail@example.com', password)
     
     # Try to access inbox
     mail.select('INBOX')
@@ -46,7 +46,7 @@ try:
     else:
         config = {}
     
-    config['email'] = 'kbaker@onwasa.com'
+    config['email'] = 'youremail@example.com'
     config['imap_server'] = 'outlook.office365.com'
     config['imap_port'] = 993
     config['imap_password'] = password
