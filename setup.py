@@ -46,14 +46,14 @@ def setup():
     
     # Create default config
     config = {
-        'email': 'kbaker@onwasa.com',
+        'email': 'youremail@example.com',
         'check_interval_seconds': 30,
         'require_approval': True,
         'spam_detection': True,
         'auto_unsubscribe': False,
         'mail_app': 'outlook',
         'whitelist_domains': [
-            'onwasa.com',
+            'example.com',
             'microsoft.com', 
             'apple.com',
             'google.com',
