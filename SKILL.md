@@ -5,7 +5,7 @@ triggers:
   - boss assistant
   - handle boss email
   - automate boss tasks
-  - dbergman@onwasa.com
+  - boss@example.com
 ---
 
 # Boss Assistant
@@ -14,7 +14,7 @@ triggers:
 
 ## What It Does
 
-1. 📧 **Monitors Email** - Watches for emails from dbergman@onwasa.com
+1. 📧 **Monitors Email** - Watches for emails from boss@example.com
 2. 🧠 **Understands Requests** - Parses what your boss is asking for
 3. 🤖 **Executes Tasks** - Tries to complete the work automatically
 4. 📚 **Learns New Skills** - If it doesn't know how, it figures it out
@@ -24,7 +24,7 @@ triggers:
 
 ### Email Monitoring
 - Checks for new emails every 5 minutes
-- Filters by sender (dbergman@onwasa.com)
+- Filters by sender (boss@example.com)
 - Extracts the request/task from email body
 
 ### Task Execution
@@ -63,8 +63,8 @@ The assistant will:
 Create `.boss_assistant_config.json`:
 ```json
 {
-  "email": "your.email@onwasa.com",
-  "boss_email": "dbergman@onwasa.com",
+  "email": "your.user@example.com",
+  "boss_email": "boss@example.com",
   "check_interval_minutes": 5,
   "auto_reply": false,
   "require_approval": true
@@ -131,7 +131,7 @@ Task: Pull Q3 sales report and email to team
 🤖 What I did:
    • Accessed sales system
    • Generated Q3 report (sales_q3_2025.xlsx)
-   • Drafted email to team@onwasa.com
+   • Drafted email to user@example.com
 
 📎 Attachments:
    • sales_q3_2025.xlsx
